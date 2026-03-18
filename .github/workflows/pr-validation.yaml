@@ -1,0 +1,12 @@
+name: pr-validation
+on:
+  pull_request:
+    branches: [main]
+    types: [opened,reopened]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: exit with error
+        run: exit 1
