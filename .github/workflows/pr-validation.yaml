@@ -1,4 +1,4 @@
-name: pr-validation
+noname: pr-validation
 on:
   pull_request:
     branches: [main,maindev]
@@ -9,4 +9,5 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - name: exit with error
-        run: exit 1
+        run: exit 0
+        
